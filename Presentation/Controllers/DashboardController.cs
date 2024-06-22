@@ -20,7 +20,7 @@ namespace Presentation.Controllers
 
 
         [HttpGet]
-        [Authorize(Policy = "RequireAdministratorRole")]
+        [Authorize(Policy = "RequireCommonRole")]
         public async Task<IActionResult> Get()
         {
           var dashboard = await _getDemoDashboard.GetDemoDashboardAsync();
